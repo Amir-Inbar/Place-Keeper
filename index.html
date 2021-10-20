@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Place Keeper</title>
+</head>
+<body onload="init()">
+
+    <div class="nav-container">
+        <div class="nb-logo">Place Keeper</div>
+        <div class="nav-links">
+            <div class="nav-link link1" onclick="onUserPrefs()">User preferences</div>
+            <div class="nav-link link2" onclick="onMapNav()">Map</div>
+
+        </div>
+        <div class="burger" onclick="navSide()">
+            <div class="side-nav line1"></div>
+            <div class="side-nav line2"></div>
+            <div class="side-nav line3"></div>
+        </div>
+    </div>
+
+    <script src="./services/storageService.js"></script>
+    <script src="./services/utilService.js"></script>
+    <script src="./services/userPreService.js   "></script>
+    <script src="./services/placeService.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+</html>

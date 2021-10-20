@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    background-color: rgba(93, 73, 84, 0.7);;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+.nb-logo {
+    color: white;
+    letter-spacing: 10px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    justify-content:end;
+    width: 650px;
+}
+.nav-links div {
+    margin-left: 35px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin:20%;
+    transition: all .9s ease;
+}
+
+.form-container {
+    height: 92vh;
+    max-width: 50vw;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    text-align: center;
+}
+form {
+    background-color: aliceblue;
+    min-width: 100%;
+}
+.user-input {
+ margin: 20px;
+}
+
+
+
+.modal-container {
+    position: relative;
+    top: 5vw;
+    left: 10%;
+}
+.modal {
+    position: absolute;
+    min-height: 7rem;
+    min-width: 12rem;
+    font-size: 25px;
+    background-color:lightskyblue;
+    color:chocolate;
+    border: 1px solid lightcoral;
+    display: none;
+}
+.not-age {
+    background-color: red;
+    color: grey;
+}
+.valid-age {
+    background-color: lightgreen;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+        body {
+            overflow-x: hidden;
+        }
+    .nav-links {
+        opacity: 0;
+        background-color: rgba(93, 73, 84, 0.7);
+        width: 50%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        min-height: 20rem;
+        right: 0;
+        top:50px;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(100%);
+    }
+    .nav-links div {
+        opacity: 0;
+        
+    }  
+    .burger {
+        display: block;
+    }
+}
+.nav-active {
+    opacity: 0;
+    transform: translateX(0%);
+}
+
+@keyframes navSlide {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
